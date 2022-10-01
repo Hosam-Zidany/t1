@@ -1,0 +1,341 @@
+/* start var */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+}
+/* end var */
+/* start global */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+}
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* small */
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* medium */
+/* big */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* big */
+/* main-head */
+.spc .container{
+  width: 100%;
+  height: 100px;
+  background-color: #eee
+}
+.spc .container h1{
+  color: #f6f6f6;
+  font-weight: 800;
+  text-align: center;
+  font-size: 60px;
+  margin: 0;
+}
+.spc .container p{
+  color: #213123;
+  font-weight: 400;
+  text-align: center;
+  margin: -20px;
+  color: #575757;
+}
+/* main-head */
+/* end global */
+/* header */
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 90px;
+  height: 40px;
+}
+
+.header .head span {
+  font-size: 40px;
+  transition: 0.5s;
+}
+.header .links {
+  position: relative;
+}
+.header ul {
+  position: absolute;
+  right: 0pt;
+  list-style: none;
+  margin-top: 10px;
+  padding: 10px;
+  width: 200px;
+  background-color: #eee;
+  display: none;
+}
+.header .links:hover span {
+  transform: scale(1.2) rotate(90deg);
+}
+.header .links:hover ul {
+  display: block;
+  z-index: 1;
+}
+.header ul li a {
+  text-decoration: none;
+  color: #123123;
+  display: block;
+  padding: 10px;
+  transition: 0.3s;
+}
+.header ul::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #eee transparent;
+  z-index: 1;
+}
+.header ul li:not(:last-child) a {
+  border-bottom: 1px solid rgb(205, 210, 214);
+}
+.header ul li:hover a {
+  padding-left: 25px;
+}
+/* header */
+/* main section */
+.main  {
+  width: 100%;
+  height: calc(100vh - 76px);
+  background-image: url(../css/back.png);
+  position: relative;
+  background-size: cover;
+  margin-top: 10px;
+}
+.main .container .contect .p {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+.main .container .contect .p h1{
+  color: var(--main-color);
+}
+/* main section */
+/* landing */
+.landing .desc{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  gap: 100px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.landing .desc span{
+  font-size: 60px;
+  color: var(--main-color);
+  margin-left: 30% ;
+}
+/* landing */
+/* services-section */
+.services-section .srv{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  gap: 10px;
+  align-items: center;
+}
+.services-section .srv .srv1{
+  display: flex;
+  margin-bottom: 40px;
+}
+.services-section .srv span{
+  font-size: 40px;
+  color: var(--main-color);
+}
+.services-section .srv .bord1 img{
+  width: 200px;
+  height: 300px;
+}
+.services-section .srv .bord1{
+  position: relative;
+}
+.services-section .bord1::before{
+  position: absolute;
+  content: "";
+  background-color: var(--secondary-color);
+  height: calc(100% + 100px);
+  width: 51px;
+  top: -50px;
+  right:120px;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .services-section .bord1::before{
+    display:none;
+  }.services-section .srv .bord1{
+    display: none;
+  }
+  .services-section .container{
+    margin-left:  5px;
+  }
+  .services-section .srv{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
+  
+}}
+@media (max-width: 900px) {
+  .services-section .bord1::before{
+    display:none;
+  }.services-section .srv .bord1{
+    display: none;
+  }
+  .services-section .container{
+    margin-left:  5px;
+  }
+  .services-section .srv{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
+}
+}
+@media (max-width: 1199px) {
+  .services-section .bord1::before{
+    display:none;
+  }.services-section .srv .bord1{
+    display: none;
+  }
+  .services-section .container{
+    margin-left: 5px;
+  }
+  .services-section .srv{
+    margin-left: 5px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
+}
+}
+/* services-section */
+/* portf */
+.portf .container .contenet-p{
+  margin-top: 40%;
+  margin-bottom: 40%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  gap: 10px;
+  align-items: center;
+}
+.portf .container .contenet-p h3{
+  font-weight: 800;
+  font-style: bold;
+}
+/* portf */
+/* about */
+.about .container .content-a{
+  display: flex;
+}
+.about .container .content-a .text{
+  margin-left: 60px;
+  line-height: 2.4;
+  position: relative;
+}
+.about .container .content-a .text hr{
+  width: 30%;
+  position: absolute;
+  left:0;
+  bottom:55%;
+  border-color: var(--main-color);
+}
+
+.about .container .content-a .image img{
+  width: 200px;
+  height: 300px;
+}
+.about .content-a .image{
+  position: relative;
+  margin-top:50px;
+}
+.about .content-a .image::before{
+  position: absolute;
+  content: "";
+  background-color: var(--main-color);
+  height: calc(100% + 50px);
+  width: 51px;
+  top: -25px;
+  right:-30px;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .about .content-a .image::before{
+    display:none;
+  }.about .content-a .image{
+    display: none;
+  }
+}
+/* about */
+/* connect */
+.info .container .mails{
+  text-align:25%;
+}
+.info .container .mails h1{
+  color: var(--main-color);
+  font-size: 50px;
+}
+.info .container .mails h2{
+  color: var(--secondary-color);
+  font-size: 30px;
+}
+.info .container .mails a {
+  text-decoration: none;
+}
+.info .container .mails .logos{
+  display: flex;
+  align-items: center;
+}
+.info .container .mails .logos span{
+  font-size: 15px;
+  color:#6d706f
+}
+.info .container .mails .logos p{
+  font-size: 10px;
+}
+/* connect */
+/* footer */
+footer .container{
+  background-color: var(--secondary-color);
+  width:  100%;
+  height: 50px;
+  margin: 0px;
+  padding-top: 5px;
+}
+footer .container .inf{
+  text-align: center;
+}
+footer .container .inf span{
+  color: var(--main-color);
+  font-style: bold;
+}
+/* footer */
